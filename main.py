@@ -2,14 +2,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from math import sqrt
 
-import sys
-
-sys.path.append('../lab3')
-
 import distributions as dst
 
 
-# находит усы выборки
 def moustaches(sel):
     n = len(sel)
     q1 = sel[n // 4 - 1] if n % 4 == 0 else sel[n // 4]
@@ -47,4 +42,3 @@ for d in ds:
     plt.xlabel('x')
     plt.title(d.name)
     plt.show()
-
